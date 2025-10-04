@@ -56,6 +56,26 @@ class MyStlyeToolDialog(QtWidgets.QDialog):
 		)
 
 		self.cancelButton = QtWidgets.QPushButton('Cancel')
+		self.cancelButton = QtWidgets.QPushButton('Create')
+		self.cancelButton.setStyleSheet(
+			'''
+				QPushButton {
+					background-color: #FFCCF2;
+					color: white;
+					border-radius: 18px;
+					font-size: 16px;
+					padding: 8px;
+					font-family: Papyros;
+					font-weight: bold;
+				}
+				QPushButton:hover {
+					background-color: qlineargradient(x1:0, y1:0, x2:1, y2:01, stop:0 red, stop:1 blue);
+				}
+				QPushButton:pressed {
+					background-color: navy;
+				}
+			'''
+		)
 		self.buttonLayout.addWidget(self.createButton)
 		self.buttonLayout.addWidget(self.cancelButton)
 
